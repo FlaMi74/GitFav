@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --ff-primary: 'Poppins', sans-serif;
+    --text-color: #ffffff;
+
+    --hue: 194;
+    --primary-color: hsl(var(--hue), 9, 89);
+    --bg-primarycolor: hsl(var(--hue), 72%, 13%);
+    --input-color: hsl(var(--hue), 73%, 13%);
+    --table-primarycolor: hsla(var(--hue), 64%, 6%, 0.502)
+    --table-secondcolor: hsl(var(--hue), 31%, 42%); 
+    --bgc-title: hsl(var(--hue), 65%, 7%);
+
+    color: hsl(191, 65%, 7%);
+
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: #000;
+}
+
+body * {
+    font-family: var(--ff-primary);
+    color: var(--text-color);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap; /*não deixa quebra a linha*/
+    border-width: 0;
+}
+
+#app {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 12px;
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2.5rem 0;
+}
+
+header #gitFav {
+    width: 18.6rem;
+    height: 3.2rem;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.search input {
+    width: 46rem;
+    height: 4.8rem;
+    border: none;
+    border-radius: .4rem 0 0 .4rem;
+    padding: 1.6rem;
+    border-radius: 5px;
+    background-color: var(--input-color);
+}
+
+.search button {
+    border-radius: 5px;
+    width: 17rem;
+    height: 4.8rem;
+    border: none;
+    cursor: pointer;
+    background-image: url("./assets/Button.png");
+}
+
+.search button:hover {
+    background-image: url("./assets/Buttonoff.png");
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    box-shadow: 1rem 1rem 2rem -0.7rem rgba(65, 133, 235, 0.753);
+}
+
+table * {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+thead tr th{
+    font-weight: bold;
+}
+
+table th {
+    background: var(--bg-primarycolor);
+    text-align: left;
+    font-weight: normal;
+    padding: 1.5rem;
+}
+
+table th:first-child {
+    border-top-left-radius: .4rem ;
+}
+
+table th:last-child {
+    border-top-right-radius: .4rem;
+}
+
+table td {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+td.user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+td.user a {
+    text-decoration: none;
+}
+
+td.user a p{
+    font-weight: bold;
+}
+
+td .remove {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+table tr:nth-child(odd) {
+    background:var(--table-primarycolor);
+}
+
+table tr:nth-child(even) {
+    background: var(--bgc-title);
+}
+
+td.user img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
+
